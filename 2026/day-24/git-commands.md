@@ -188,3 +188,23 @@ View Full History in a compact format
     git log --oneline
     ```
 
+## Git Branching
+
+| Topic | Command | Explanation |
+|-------|-------------------|-------------|
+| List branches | `git branch` | Shows all local branches. Current branch is marked with `*`. |
+| Create branch | `git branch feature-x` | Creates a new branch but does not switch to it. |
+| Switch branch | `git switch feature-x` | Switches to an existing branch. |
+| Create + Switch | `git switch -c feature-x` | Creates a new branch and switches to it. |
+| Delete branch (safe) | `git branch -d feature-x` | Deletes branch only if merged. |
+| Force delete branch | `git branch -D feature-x` | Deletes branch even if not merged. |
+| Compare branches | `git diff main..feature-x` | Shows differences between two branches. |
+| Recover deleted branch | `git reflog` | Shows commit history to recover lost branches. |
+| List remote branches | `git branch -r` | Displays all remote tracking branches. |
+| Fetch upstream changes | `git fetch upstream` | Downloads latest changes from upstream without merging. |
+| Merge upstream changes | `git merge upstream/main` | Merges latest upstream `main` into your current branch. |
+| Rebase upstream changes | `git rebase upstream/main` | Rebases your branch on top of upstream `main` for linear history. |
+| Push branch to origin | `git push origin main` | Pushes your local branch to your remote repository (`origin`). |
+| Add the original repo as upstream | `git remote add upstream <original-repo-url>` | Adds a new remote named "upstream" to local Git repository |
+| Create a merge commit prevents fast forward | `git merge --no-ff feat/login` | Prevents fast-forward, Forces Git to create a merge commit |
+| Prevent fast forward and merge commit(no merge commit) | `git merge --no-ff --no-commit feat/login` | Performs the merge, Stages all changes, Leaves you in "ready to commit" state |

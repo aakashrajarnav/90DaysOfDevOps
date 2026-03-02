@@ -1,1 +1,3 @@
 Hotfix applied
+Fix typo
+Critical bug fix

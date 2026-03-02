@@ -188,23 +188,85 @@ View Full History in a compact format
     git log --oneline
     ```
 
-## Git Branching
+## Branching & Basic Workflow
 
 | Topic | Command | Explanation |
-|-------|-------------------|-------------|
+|-------|----------|-------------|
 | List branches | `git branch` | Shows all local branches. Current branch is marked with `*`. |
 | Create branch | `git branch feature-x` | Creates a new branch but does not switch to it. |
 | Switch branch | `git switch feature-x` | Switches to an existing branch. |
 | Create + Switch | `git switch -c feature-x` | Creates a new branch and switches to it. |
+| Create & Switch Branch | `git checkout -b feature-x` | Creates a new branch and switches to it. |
+| Stage Changes | `git add .` | Stages all modified files. |
+| Commit Changes | `git commit -m "message"` | Creates a commit with staged changes. |
 | Delete branch (safe) | `git branch -d feature-x` | Deletes branch only if merged. |
 | Force delete branch | `git branch -D feature-x` | Deletes branch even if not merged. |
 | Compare branches | `git diff main..feature-x` | Shows differences between two branches. |
 | Recover deleted branch | `git reflog` | Shows commit history to recover lost branches. |
 | List remote branches | `git branch -r` | Displays all remote tracking branches. |
+| View History | `git log --oneline` | Shows compact commit history. |
+| Graph View | `git log --oneline --graph --all` | Shows branch structure visually. |
+
+---
+
+## Git Merge
+
+| Topic | Command | Explanation |
+|-------|----------|-------------|
+| Regular Merge | `git merge feature-x` | Merges feature branch into current branch. |
+| Force Merge Commit | `git merge --no-ff feature-x` | Prevents fast-forward and always creates a merge commit. |
+| Merge Without Auto Commit | `git merge --no-ff --no-commit feature-x` | Performs merge but stops before committing (manual review before commit). |
+| Abort Merge | `git merge --abort` | Cancels merge if conflicts occur. |
+
+---
+
+## Git Rebase
+
+| Topic | Command | Explanation |
+|-------|----------|-------------|
+| Rebase Onto Main | `git rebase main` | Re-applies current branch commits on top of `main` (rewrites history). |
+| Continue Rebase | `git rebase --continue` | Continues rebase after resolving conflicts. |
+| Abort Rebase | `git rebase --abort` | Cancels ongoing rebase process. |
+
+---
+
+## Squash Merge
+
+| Topic | Command | Explanation |
+|-------|----------|-------------|
+| Squash Merge | `git merge --squash feature-x` | Combines all feature commits into a single commit before adding to current branch. |
+| Finalize Squash | `git commit -m "Add complete feature"` | Creates the final single commit after squash. |
+
+---
+
+## Git Stash
+
+| Topic | Command | Explanation |
+|-------|----------|-------------|
+| Stash Changes | `git stash` | Saves uncommitted tracked changes temporarily. |
+| Stash Including Untracked | `git stash -u` | Saves tracked + untracked files. |
+| List Stashes | `git stash list` | Displays all stashed entries. |
+| Apply & Remove Latest | `git stash pop` | Applies latest stash and removes it from list. |
+| Apply Specific Stash | `git stash apply stash@{1}` | Applies specific stash but keeps it in list. |
+| Drop Stash | `git stash drop stash@{0}` | Deletes a specific stash entry. |
+| Clear All Stashes | `git stash clear` | Deletes all stash entries. |
+
+---
+
+## Git Cherry-Pick
+
+| Topic | Command | Explanation |
+|-------|----------|-------------|
+| Cherry-Pick Commit | `git cherry-pick <commit-id>` | Applies a specific commit from another branch to current branch. |
+| Abort Cherry-Pick | `git cherry-pick --abort` | Cancels cherry-pick if conflicts occur. |
+
+
+## Git Upstream
+
+| Topic | Command | Explanation |
+|-------|-------------------|-------------|
 | Fetch upstream changes | `git fetch upstream` | Downloads latest changes from upstream without merging. |
 | Merge upstream changes | `git merge upstream/main` | Merges latest upstream `main` into your current branch. |
 | Rebase upstream changes | `git rebase upstream/main` | Rebases your branch on top of upstream `main` for linear history. |
 | Push branch to origin | `git push origin main` | Pushes your local branch to your remote repository (`origin`). |
 | Add the original repo as upstream | `git remote add upstream <original-repo-url>` | Adds a new remote named "upstream" to local Git repository |
-| Create a merge commit prevents fast forward | `git merge --no-ff feat/login` | Prevents fast-forward, Forces Git to create a merge commit |
-| Prevent fast forward and merge commit(no merge commit) | `git merge --no-ff --no-commit feat/login` | Performs the merge, Stages all changes, Leaves you in "ready to commit" state |

@@ -1,3 +1,1 @@
 Added username
-Added password
-Added Login button

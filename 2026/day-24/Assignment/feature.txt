@@ -1,1 +1,2 @@
 Added username
+Added password

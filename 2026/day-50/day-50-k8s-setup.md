@@ -187,9 +187,9 @@ kubectl get nodes
 ```
 
 Write down: Which one did you choose and why?
-```
-I prefer KIND because it runs Kubernetes inside Docker, making it lightweight, fast, and ideal for CI/CD and multi-node simulations. Minikube is better for beginners due to its simplicity and built-in addons, GUI Dashboard but KIND is closer to real-world DevOps workflows.
-```
+
+I prefer KIND because it runs Kubernetes inside Docker, making it lightweight, fast, and ideal for CI/CD and  multi-node simulations. Minikube is better for beginners due to its simplicity and built-in addons, GUI Dashboard   but KIND is closer to real-world DevOps workflows.
+
 ---
 
 ### Task 5: Explore Your Cluster
@@ -252,7 +252,9 @@ kubectl config view
 ```
 ![alt text](cluster.png)
 Write down: What is a kubeconfig? Where is it stored on your machine?
-```
-kubeconfig is a file that stores cluster connection details, authentication credentials, and contexts, allowing kubectl to interact with Kubernetes clusters
-```
+
+- kubeconfig is a file that stores cluster connection details, authentication credentials, and contexts, allowing
+kubectl to interact with Kubernetes clusters
+
+- It will get stored in /home/ubuntu/.kube/config
 ---

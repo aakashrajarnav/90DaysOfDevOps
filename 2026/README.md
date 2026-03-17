@@ -52,3 +52,6 @@
 | Day 048 | GitHub Actions Project: End-to-End CI/CD Pipeline | CI/CD | [Solution](./day-48/day-48-actions-project.md) |
 | Day 049 | DevSecOps: Add Security to Your CI/CD Pipeline | CI/CD | [Solution](./day-49/day-49-devsecops.md) |
 | Day 050 | Kubernetes Architecture and Cluster Setup | Kubernetes | [Solution](./day-50/day-50-k8s-setup.md) |
+| Day 051 | Kubernetes Manifests and Your First Pods | Kubernetes | [Solution](./day-51/day-51-pods.md) |
+| Day 052 | Kubernetes Namespaces and Deployments | Kubernetes | [Solution](./day-52/day-52-namespaces-deployments.md) |
+| Day 053 | Kubernetes Services | Kubernetes | [Solution](./day-53/day-53-services.md) |

@@ -55,3 +55,10 @@
 | Day 051 | Kubernetes Manifests and Your First Pods | Kubernetes | [Solution](./day-51/day-51-pods.md) |
 | Day 052 | Kubernetes Namespaces and Deployments | Kubernetes | [Solution](./day-52/day-52-namespaces-deployments.md) |
 | Day 053 | Kubernetes Services | Kubernetes | [Solution](./day-53/day-53-services.md) |
+| Day 054 | Kubernetes ConfigMaps and Secrets | Kubernetes | [Solution](./day-54/day-54-configmaps-secrets.md) |
+| Day 055 | Persistent Volumes (PV) and Persistent Volume Claims (PVC) | Kubernetes | [Solution](./day-55/day-55-persistent-volumes.md) |
+| Day 056 | Kubernetes StatefulSets | [Solution](./day-56/day-56-statefulsets.md) |
+| Day 057 | Resource Requests, Limits, and Probes | Kubernetes | [Solution](./day-57/day-57-resources-probes.md) |
+| Day 058 | Metrics Server and Horizontal Pod Autoscaler (HPA) | Kubernetes | [Solution](./day-58/day-58-metrics-hpa.md) |
+| Day 059 | Helm — Kubernetes Package Manager | Kubernetes | [Solution](./day-59/day-59-helm.md) |
+| Day 060 | Capstone: Deploy WordPress + MySQL on Kubernetes | Kubernetes | [Solution](./day-60/day-60-capstone.md) |
